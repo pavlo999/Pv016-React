@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useTypedSelector } from "../../../hooks/useTypedSelector";
+import { useDispatch } from "react-redux";
+import http from "../../../http_common";
 
 const DefaultHeader = () => {
+
   return (
     <header>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -27,7 +31,11 @@ const DefaultHeader = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/createProduct">
+                <Link
+                  className="nav-link"
+                  aria-current="page"
+                  to="/createProduct"
+                >
                   Додати продукт
                 </Link>
               </li>
